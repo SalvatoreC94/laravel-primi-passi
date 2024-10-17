@@ -12,7 +12,11 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+        'title' => 'Benvenuto in Laravel!',
+        'description' => 'Questa è la nostra prima view dinamica con Blade.'
+    ];
+    return view('home', $data);
 });
+ 
